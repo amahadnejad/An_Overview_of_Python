@@ -25,7 +25,7 @@ def country(name='Iran'):
 
 country()
 country('Canada')
-# country('France')
+country('France')
 
 # Passing a List as an Argument
 def my_list(food):
@@ -42,3 +42,30 @@ def x(num):
 print(x(5))
 print(x(9))
 print(x(8))
+
+# Average Function
+def average(numbers):
+    length = len(numbers)
+    numbers_sum = 0
+    for i in numbers:
+        numbers_sum += i
+    return numbers_sum/length
+
+nums = [1, 2, 3, 4, 5]
+print(average(nums))
+
+print("-------")
+
+# Getting Coffee Function
+def get_coffee(money):
+    coffee_cost = 3.50 # Assuming Coffee costs 3.50$
+    if money >= 3.50:
+        print("Okay! Boiling Coffee")
+        print("Your Coffee is Ready!")
+        change = money - coffee_cost
+        print(f"Your Change: {change}")
+    else:
+        print("Sorry! You Don't have Enough Money For Coffee!")
+
+budget = 3.5 # The Budget To Buy Coffee
+get_coffee(budget)
